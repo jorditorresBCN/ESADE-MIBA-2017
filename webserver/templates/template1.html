@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Inception V3 Test</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+
+        <h3 class="text-muted">ESADE MIBA 2017</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Image classifier</h1>
+        <p class="lead">Upload an image</p>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="file">Select a file</label>
+                <input onchange="readURL(this);" name="file" id="input_image" type="file" required accept="image/jpeg" />
+                <br>
+            </fieldset>
+            <fieldset>
+                <button id="upload-file-btn" class="btn btn-lg btn-success" type="button">Upload</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>Image</h4>
+            <img  style="height: 125px" id="preview_image" />
+        </div>
+
+        <div class="col-lg-6">
+            <h4>Results</h4>
+            <img id="loading_image" style="display: none; height: 125px"  src="https://camo.githubusercontent.com/a1a81b0529517027d364ee8432cf9a8bd309542a/687474703a2f2f692e696d6775722e636f6d2f56446449444f522e676966" />
+            <p><ul id="results"></ul></p>
+
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/static/main.js"></script>
+</body>
+</html>
+
