@@ -23,7 +23,7 @@ def predict(name=None):
     file = request.files['file']
     file_root = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(file.filename))
     file.save(file_root)
-    host = "localhost"
+    host = "35.190.201.155"
     port = "8888"
     channel = implementations.insecure_channel(host, int(port))
     stub = prediction_service_pb2.beta_create_PredictionService_stub(channel)
@@ -39,7 +39,7 @@ def predict(name=None):
                 tf.contrib.util.make_tensor_proto(data, shape=[1]))
             result_tf = stub.Predict(request_tf, 10.0)  # 10 secs timeout
             result = []
-            for v in result_tf.outputs._values['classes'].string_val._values:
+            for v in result_tf.outputs['classes'].string_val:
                 result.append(v)
     except:
         result = ["error",]
